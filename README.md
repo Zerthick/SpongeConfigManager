@@ -9,14 +9,14 @@ Sponge Config Manager was designed to be very simple to use.  You grab an instan
 then you set it up by calling ```setup()``` and passing in a ```Path``` to the file you want to save/modify,
 a ```ConfigurationLoader<CommentedConfigurationNode>``` to manage loading and modifying nodes, a ```Logger``` to handle
 logging any error messages originating from the file I/O, and finally an implementation of the ```ConfigManager.DefaultConfigBuilder```
-interface, which handles formatting the default configuration format.  `Important:` the default configuration format
+interface, which handles the default configuration format.  **Important:** the default configuration format
 will only be used if the config file in question does not already exist, otherwise the file as it exists will be loaded.
-Finally you can get a reference to the config file loaded by calling ```getConfig()```.  That's it three simple method calls
+Finally you can get a reference to the config file loaded by calling ```getConfig()```.  That's it, three simple method calls
 and you have yourself a config file!  You can see an example of Sponge Config Manager being used below.
  
 ## Example Usage
 
-```
+```Java
 @Plugin(id = "ConfigExample", name = "ConfigExample", version = "1.0.0")
 public class ConfigExample {
    
