@@ -38,15 +38,13 @@ public class ConfigExample {
 
     private ConfigManager configManager;
 
-    private Map<String, Boolean> disabledMap;
-
     @Listener
     public void onServerStart(GameStartedServerEvent event) {
         
         //Grab Instance of Config Manager
         configManager = ConfigManager.getInstance();
         
-        //Setup the config, passing in the default config format
+        //Setup the config, passing in the default config format builder
         configManager.setup(defaultConfig, configLoader, getLogger(), new ConfigManager.DefaultConfigBuilder() {
             @Override
             public void build(CommentedConfigurationNode config) {
