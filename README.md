@@ -68,7 +68,7 @@ public class ConfigExample {
 ```
 
 ### Output Config File
-```JSON
+```
 # This is a sample boolean node.
 sampleNode=true
 samples {
