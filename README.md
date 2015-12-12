@@ -1,7 +1,7 @@
 # Sponge Config Manager
 A config manager for sponge plugins.
 ### The Goal:
-Sponge Config Manager arouse from difficulties encountered on my various projects with properly configuring and updating
+Sponge Config Manager arose from difficulties encountered on my various projects with properly configuring and updating
 default configurations.  Sponge Config Manager is my attempt to simplify this processes by providing one convenient 
 class to handle all my configuration needs.
 ### How it Works:
