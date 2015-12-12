@@ -55,7 +55,7 @@ public class ConfigExample {
             }
         });
         
-        //Alternative method of Setup Using Lambda Expressions
+        //Alternative method of setup using Lambda Expressions
         configManager.setup(defaultConfig, configLoader, getLogger(), config -> {
             config.getNode("sampleNode").setComment("This is a sample boolean node.").setValue(true);
             config.getNode("samples", "sampleNode2").setComment("This is a sample string node.").setValue("Hello World!");
