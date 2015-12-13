@@ -5,9 +5,9 @@ Sponge Config Manager arose from difficulties encountered on my various projects
 default configurations.  Sponge Config Manager is my attempt to simplify this processes by providing one convenient 
 class to handle all my configuration needs.
 ### How it Works:
-Sponge Config Manager was designed to be very simple to use.  You grab an instance of it with ```ConfigMangaer.getInstance();```
+Sponge Config Manager was designed to be very simple to use.  You grab an instance of it with ```ConfigManager.getInstance();```
 then you set it up by calling ```setup()``` and passing in a ```Path``` to the file you want to save/modify,
-a ```ConfigurationLoader<CommentedConfigurationNode>``` to manage loading and modifying nodes, a ```Logger``` to handle
+a ```ConfigurationLoader<CommentedConfigurationNode>``` to manage loading and saving nodes, a ```Logger``` to handle
 logging any error messages originating from the file I/O, and finally an implementation of the ```ConfigManager.DefaultConfigBuilder```
 interface, which handles the default configuration format.  **Important:** the default configuration format
 will only be used if the config file in question does not already exist, otherwise the file as it exists will be loaded.
@@ -38,15 +38,13 @@ public class ConfigExample {
 
     private ConfigManager configManager;
 
-    private Map<String, Boolean> disabledMap;
-
     @Listener
     public void onServerStart(GameStartedServerEvent event) {
         
         //Grab Instance of Config Manager
         configManager = ConfigManager.getInstance();
         
-        //Setup the config, passing in the default config format
+        //Setup the config, passing in the default config format builder
         configManager.setup(defaultConfig, configLoader, getLogger(), new ConfigManager.DefaultConfigBuilder() {
             @Override
             public void build(CommentedConfigurationNode config) {
