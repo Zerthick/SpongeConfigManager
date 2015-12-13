@@ -27,17 +27,17 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-public class ConfigManager {
+public class ZConfigManager {
 
-    private static ConfigManager instance = null;
+    private static ZConfigManager instance = null;
 
-    protected ConfigManager(){
+    protected ZConfigManager(){
         //Singleton Design Pattern
     }
 
-    public static ConfigManager getInstance(){
+    public static ZConfigManager getInstance(){
         if(instance == null){
-            instance = new ConfigManager();
+            instance = new ZConfigManager();
         }
         return instance;
     }
